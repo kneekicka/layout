@@ -1,0 +1,42 @@
+header{
+	padding-top: 20px;
+	clear: both;
+
+	@media screen and (max-width: 768px) {
+		padding-top: 10px;
+	}
+
+	.logo{
+
+		@media screen and (max-width: 768px) {
+			max-width: 118px;
+		}
+
+	}
+
+	.header-address{
+		margin-top: 32px;
+
+		p{
+			line-height: 1.4rem;
+			font-size: 1.9rem;
+			margin-bottom: 10px;
+		}
+	}
+
+	.header-phone{
+
+		p{
+			font-size: 3rem;
+    		margin: 14px 0 10px 0;
+
+    		@media screen and (max-width: 768px) {
+				font-size: 2rem;
+				margin: 0 0 5px 0;
+  			}
+
+		}
+
+	}
+	
+}

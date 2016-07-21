@@ -1,0 +1,279 @@
+body{
+	font-size: 2rem;
+	font-family: CondPro;
+}
+
+// Text styles
+
+h2{
+    font-size: 3.5rem;
+    @extend .upper;
+    padding-top: 20px;
+}
+
+h3 {
+	line-height: 3.4rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin: 16px 0;
+}
+
+.light{
+	font-weight: lighter;
+}
+
+.light-italic{
+	@extend .light;
+	font-style: italic;
+}
+
+.upper{
+	text-transform: uppercase;
+}
+
+// Margin and padding styles
+
+.m-0-auto{
+	margin: 0 auto;
+}
+
+.m-b-40{
+	margin-bottom: 40px;
+}
+
+.m-b-60{
+	margin-bottom: 60px;
+}
+
+.m-b-70{
+	margin-bottom: 70px;
+}
+
+.m-t-70{
+	margin-top: 70px;
+}
+
+// Container styles
+
+.container{
+	width: 994px;
+	margin: 0 auto;
+	padding: 0 15px;
+	overflow: hidden;
+
+	@media screen and (max-width: 768px) {
+		width: initial;
+    	max-width: 768px;
+    	float: none;
+		padding: 0 7px;    	
+  	}
+
+	@media screen and (min-width: 769px)  and (max-width: 991px) {
+		width: initial;
+		max-width: 991px;
+	} 
+
+}
+
+.row{
+	overflow: hidden;
+	clear: both;
+}
+
+// Extra-small size screen grid
+
+@media screen and (max-width: 768px) {
+
+	.col-xs-6{
+		width: 50%;
+		float: left; 	
+	}
+
+	.col-xs-12{
+		width: 100%;
+		float: left; 
+	}
+
+	.xs-hidden{
+		display: none;
+	}
+
+}	
+
+// Small size screen grid
+
+@media screen and (min-width: 769px) {
+
+	.col-sm-3 {
+	    width: 25%;
+		float: left; 	    
+	}
+
+	.col-sm-4{
+		width: 33.33333333%;
+		float: left;	
+	}
+
+	.col-sm-6{
+		width: 50%;
+		float: left;
+	}	
+
+	.col-sm-8{
+		width: 66.66666667%;
+		float: left;
+	}
+
+	.col-sm-9{
+	    width: 75%;
+		float: left;
+	}	
+
+	.col-sm-12{
+		width: 100%;
+		float: left; 
+	}
+
+	.sm-hidden{
+		display: none;
+	}
+
+	.col-20-per{
+		width: 20%;
+		float: left; 
+	}	
+
+}	
+
+// Medium size screen grid
+
+@media screen and (min-width: 992px){
+
+	.col-md-3 {
+	    width: 25%;
+		float: left;    
+	}
+
+	.col-md-4{
+		width: 33.33333333%;
+		float: left;
+	}
+
+	.col-md-8{
+		width: 66.66666667%;
+		float: left;
+	}
+
+	.col-md-9 {
+	    width: 75%;
+		float: left;    
+	}
+
+	.md-hidden{
+		display: none;
+	}
+
+}
+
+.clearfix{
+	clear: both;
+}
+
+// Align styles
+
+.text-left{
+	text-align: left;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.text-right{
+	text-align: right;
+}
+
+// Button's styles
+
+.orange-button{
+	background: $darkOrange;
+	line-height: 4rem;
+	max-height: 4rem;
+    font-size: 2.5rem;
+    display: block;
+    max-width: 210px;
+    text-align: center;
+    color: #fff;
+    @extend .upper;
+    text-decoration: none;
+
+    &:hover{
+    	color: #000;
+    }
+
+	@media screen and (max-width: 768px) {
+		line-height: 2.6rem;
+		font-size: 1.6rem;
+		max-width: 136px;
+	}
+}
+
+// Overflows
+
+.over-flow-init{
+	overflow: initial;
+}
+
+// Display styles
+
+.hide{
+	display: none;
+}
+
+.block{
+	display: block;
+}
+
+.hidden{
+	visibility: hidden;
+}
+
+
+// Image enlargement styles
+
+.img-enlarge{
+	
+	&:hover{
+		cursor: pointer;
+	}
+
+}
+
+.img-lg{
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	z-index: 100;
+
+	&:hover{
+		cursor: pointer;
+	}
+
+}
+
+// Image styles
+
+.img-responsive{
+	max-width: 100%;
+}
+
+// Div reverse order
+
+.swap-vr{
+
+	@media screen and (max-width: 768px) {
+	 	display: flex;
+	    flex-direction: column-reverse;
+	}
+
+}

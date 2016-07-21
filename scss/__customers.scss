@@ -1,0 +1,136 @@
+.customers{
+	clear: both;
+
+	h2{
+		margin-bottom: 20px;
+	}
+
+	.sub-header{
+		font-size: 2.2rem;
+		margin-bottom: 35px;
+	}
+
+}
+
+.customers-header{
+	background-color: $lightOrange;
+	padding: 20px 0 0 0;
+
+	.container{
+
+		@media screen and (max-width: 991px) {
+			padding: 0;
+		}	
+
+	}
+
+	ul.customers-tabs{
+		
+		@media screen and (max-width: 991px) {
+			box-sizing: border-box;
+		}	
+
+		li.customers-tabs-item{
+			line-height: 2.8rem;
+			font-size: 2.2rem;
+			font-weight: bold;
+			display: inline-block;
+			text-transform: uppercase;
+			text-align: center;
+			padding: 0 20px;
+			position: relative;
+
+			&:hover{
+				cursor: pointer;
+			}	
+
+			@media screen and (max-width: 991px) {
+    			text-align: left;
+    			border-top: 1px solid #000;
+    			box-sizing: border-box;
+    			width: 100%;
+    			padding: 10px 0;
+
+    			&:last-child{
+    				border-bottom: 1px solid #000;
+    			}
+
+				//Right arrow for accordions at small devices
+
+				.right-arrow{
+					position: absolute;
+					right: 14px;
+					top: 35px;
+					width: 19px;
+					height: 18px;
+					background-image: url(../img/customers/arrow-down.png);
+				}
+
+    			p{
+    				padding: 5px 0 15px 7px;
+    			}
+
+			}						
+		}
+
+		li.customers-tabs-item.active{
+			@extend .light;
+			position: relative;
+			padding-bottom: 30px;
+			margin-bottom: 20px;
+
+			@media screen and (max-width: 991px) {
+				padding-bottom: 30px;
+				margin-bottom: 0px;
+				font-weight: bold;
+
+				& div.right-arrow{
+					background-image: url(../img/customers/arrow-up.png);
+				}
+
+			}	
+
+			//Active element bottom arrow
+
+			&:after{
+			    content: '';
+			    position: absolute;
+			    left: 42%;
+			    top: 123%;
+			    width: 0;
+			    height: 0;
+			    border-left: 20px solid transparent;
+			    border-right: 20px solid transparent;
+			    border-top: 20px solid $lightOrange;
+			    clear: both;
+
+			    @media screen and (max-width: 991px) {
+    				content: none;
+				}
+
+			}
+		}
+	}
+}
+
+.customers-body{
+	padding: 20px 0 20px 0;
+
+	@media screen and (max-width: 991px) {
+		padding: 0;
+	}		
+
+	.customers-body-img{
+		margin: 10px 0;
+	}
+}
+
+//Customers accordion content for small and extra-small devices
+
+@media screen and (max-width: 991px) {
+	.customer-cont{
+		background-color: #fff;
+		border-top: 1px solid #000;
+		border-bottom: 1px solid #000;
+	}
+}	

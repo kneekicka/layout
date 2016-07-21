@@ -1,0 +1,265 @@
+.photo-frame{
+	height: 406px;
+	margin-bottom: 30px;
+	border-bottom: 4px solid $lightOrange;
+	clear: both;
+    overflow: hidden;
+    position: relative;
+
+    @media screen and (max-width: 768px) {
+		border-bottom: none;
+		height: 369px;
+	} 
+
+}
+
+//Form
+
+.form-wrapper{
+	position: absolute;
+	bottom: 32px;
+    width: 100%;
+	z-index: 1;
+	overflow: hidden;
+
+	@media screen and (max-width: 768px) {
+		top: 20px;
+		bottom: 0;
+	}  
+
+}
+
+.form{
+	width: 865px;
+	position: relative;
+    background-color: rgba(255, 255, 255, .72);
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 15px;
+
+    &:before, &:after{
+   		content: "";
+	    position: absolute;
+	    width: 0;
+	    height: 0; 
+    }
+
+    &:before{
+	    border-bottom: 155px solid rgba(255, 255, 255, .72);
+	    border-left: 48px solid transparent;
+	    left: -48px;
+	    top: 0px;    
+    }
+
+    &:after {
+	    border-top: 155px solid rgba(255, 255, 255, .72);
+	    border-right: 48px solid transparent;
+	    right: -48px;
+	    top: 0px;
+	}
+
+	@media screen and (max-width: 768px) {
+		width: 100%;
+		padding-top: 15px;
+
+		&:before, &:after{
+			content: none;
+		}
+		
+	} 
+
+	@media screen and (min-width: 769px) and (max-width: 1024px) {
+		width: 80%;
+		padding-top: 15px;
+
+		&:before{
+			content: none;
+		}
+
+		&:after{
+			content: none;
+		}
+	} 		
+
+	.form-header{
+		font-size: 3.5rem;
+    	text-transform: uppercase;
+    	margin-bottom: 10px;
+
+		@media screen and (max-width: 768px) {
+			font-size: 2.3rem;
+		}  
+
+	}
+
+	.form-subheader span{
+	    line-height: 2rem;
+		font-size: 1.6rem;
+    	text-transform: uppercase;
+    	text-align: left;
+    	display: block;
+    	text-indent: 10px;
+    	margin-bottom: 10px;
+
+		@media screen and (max-width: 768px) {
+			text-align: center;
+		}      	
+	}
+	.input-wrapper{
+		float: left;
+		padding-left: 15px;
+    	padding-right: 15px;
+    	margin-bottom: 15px;
+    	box-sizing: border-box;
+
+    	@media screen and (max-width: 768px) {
+			width: 100%;
+			margin-bottom: 5px;
+		}      
+
+		input{
+			font-family: CondPro;
+			line-height: 2.8rem;
+			font-size: 2rem;
+		    border: 1px solid #4e5659;
+		    text-indent: 10px;
+		    width: 100%;
+		    padding: 5px;	
+		    box-sizing: border-box;
+
+			&::-webkit-input-placeholder {
+				color: $almostBlack;
+		    	text-transform: uppercase;			   
+			}
+
+			&:-moz-placeholder {
+				color: $almostBlack;
+		    	text-transform: uppercase;			     
+			}
+
+			&::-moz-placeholder {
+				color: $almostBlack;
+		    	text-transform: uppercase;			     
+			}
+
+			&:-ms-input-placeholder {  
+				color: $almostBlack;
+				text-transform: uppercase;  
+			}
+
+		}
+
+		input.orange-button{
+			font-size: 2.5rem;
+			border: none;
+			color: #000;
+			background-color: $dimOrange;
+
+			&:hover{
+				color: #fff;
+			}
+
+	    	@media screen and (min-width: 768px) and  (max-width: 994px){
+    			max-width: 100%;
+			} 	
+			
+	    	@media screen and (max-width: 768px) {
+    			max-width: 100%;
+    			padding: 7px 0;
+    			font-size: 2.5rem;
+			} 		
+
+		}
+
+	}
+}
+
+.under-form{
+	font-size: 1.6rem;
+    text-align: right;
+    width: 52%;
+    color: #fff;
+    margin: 10px auto 0 auto;
+
+    a{
+    	color: #fff;
+    	
+	 	@media screen and (max-width: 768px) {
+			color: #000;
+		}     	
+    }
+
+	@media screen and (max-width: 768px) {
+	    width: 100%;
+		color: #000;
+		text-align: center;
+		margin: 10px auto 5px auto;
+	}      
+
+}
+
+//Parallelogram slider
+
+.parall-wrapper{
+    float: left; 
+}
+
+.parall{
+	width: 309px;
+    height: 405px;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+	-webkit-transform: skew(-15deg);
+    -moz-transform: skew(-15deg);
+    -o-transform: skew(-15deg);
+    overflow: hidden;
+}
+
+.parall-img{
+    position:absolute;
+    top:-55px;
+    left: -55px;
+    right:-55px;
+    bottom:-55px;
+    -webkit-transform: skew(15deg);
+    -moz-transform: skew(15deg);
+    -o-transform: skew(15deg); 	
+}
+
+.parall1{
+    margin: 0 0 0 -55px;
+    position:relative;
+}
+
+.parall2{
+    margin: 0 0 0 -57px;
+    position: absolute;
+}  
+
+.parall3{
+    margin: 0 0 0 253px;
+    position: absolute;
+} 
+
+.parall4{
+    margin: 0 0 0 563px;
+    position: absolute;
+}
+
+.parall5{
+    margin: 0 0 0 873px;
+    position: absolute;
+}
+
+.parall6{
+    margin: 0 0 0 1183px;
+    position: absolute;
+}
+
+//Looping through slider images
+
+@for $i from 1 through 6{
+  .parall-img#{$i} {
+    background: url(../img/multiple-slider/#{$i}/1.jpg) top left no-repeat;
+   } 
+}    
